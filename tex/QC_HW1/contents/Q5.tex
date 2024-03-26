@@ -1,0 +1,27 @@
+Derive the mean and variance of the Binomial distribution.
+
+    Proof the mean $E(X) = np$
+        \begin{align*}
+            E(X) &= \sum_{x=0}^{\infty}\ x\ p(x) \\
+            &= \sum_{x=0}^{\infty}\ x\ C_{x}^{n}\ p^{x}\ q^{n-x} \\
+            &= \sum_{x=0}^{\infty}\ x\ \frac{n!}{x!(n-x)!}\ p^{x}\ q^{n-x} \\
+            &= \sum_{x=1}^{\infty}\ \frac{np \ (n-1)!}{(x-1)!(n-x)!}\ p^{x-1}\ q^{n-x} \\
+            &= \sum_{x=1}^{\infty}\  np\ C_{x-1}^{n-1}\ p^{x-1}\ q^{n-x} \\
+            &= np\ \sum_{x=1}^{\infty}\  C_{x-1}^{n-1}\ p^{x-1}\ q^{n-x} \\
+            &= np 
+        \end{align*}
+
+    Proof the variance $E(X^2) - E(X)^2 = npq$
+        
+        $\text{since}\  E(X^2) - E(X)^2 = E[X(X-1)] + E(X) - E(X)^2$
+        \begin{align*}
+            E[X(X-1)] &= \sum_{x=0}^{\infty}\ x(x-1)\ p(x)\\
+            &= \sum_{x=0}^{\infty}\ x(x-1)\ C_{x}^{n}\ p^{x}\ q^{n-x} \\
+            &= \sum_{x=0}^{\infty}\ x(x-1)\ \frac{n!}{x!(n-x)!}\ p^{x}\ q^{n-x} \\
+            &= \sum_{x=2}^{\infty}\ \frac{n!}{(x-2)!(n-x)!}\ p^{x}\ q^{n-x} \\
+            &= \sum_{x=2}^{\infty}\ \frac{n(n-1)p^2(n-2)!}{(x-2)!(n-x)!}\ p^{x-2}\ q^{n-x} \\
+            &= \sum_{x=2}^{\infty}\ n(n-1)p^2\ C_{x-2}^{n-2}\ p^{x-2}\ q^{n-x} \\
+            &= n(n-1)p^2\ \sum_{x=2}^{\infty}\ C_{x-2}^{n-2}\ p^{x-2}\ q^{n-x} \\
+            &= n(n-1)p^2
+        \end{align*}
+        $\text{Thus, }\ E(X^2) - E(X)^2 = n(n-1)p^2 + np - np^2 = np(1-p) = npq$

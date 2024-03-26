@@ -1,0 +1,14 @@
+A random sample of 50 units is drawn from a production process every half hour. The fraction of nonconforming product manufactured is 0.02. What is the probability that $\hat{p} \leq 0.04$ if the fraction nonconforming really is 0.02?
+    \begin{align*}
+        &r.v. \ X \equiv \ \text{the number of nonconforming product}\\
+        &X \sim bin(n = 50, p = 0.02)\\
+        &\because \ \hat{p} = \frac{x}{n} = \frac{x}{50} = 0.04\\
+        &\therefore \ x = 2\\
+        %---------------------------------------------%
+        &\begin{aligned}
+            P(\hat{p} \leq 0.04) &= P(x \leq 2)\\
+            &= \sum_{x = 0}^{2} \ C_{x}^{50} \ 0.02^x \ (1 - 0.02)^{50 - x}\\
+            &= 0.922_{ \ \#}\\
+        \end{aligned}       
+        %---------------------------------------------%
+    \end{align*}

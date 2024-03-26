@@ -1,0 +1,31 @@
+The output voltage of a power supply is normally distributed with mean 5V and standard deviation 0.02V. If the lower and upper specifications for voltage are 4.95V and 5.05V, respectively.
+\begin{enumerate}
+    \item What is the probability that a power supply selected at random will conform to the specifications on voltage?
+        \begin{align*}
+            &r.v. \ X \equiv \text{the output voltage of a power}\\
+            &X \sim N(\mu = 5, \sigma^2 = 0.02^2)\\
+            %---------------------------------------------%
+            &\begin{aligned}
+                P(conformed) &= P\left(4.95 \leq x \leq 5.05\right)\\
+                &= P\left(\frac{4.95 - 5}{0.02} \leq Z \leq \frac{5.05- 5}{0.02}\right)\\
+                &= 2 \ \Phi(2.5) - 1\\
+                &= 0.98758_{ \ \#}\\
+            \end{aligned}
+            %---------------------------------------------%
+        \end{align*} 
+
+    \item How much would the process variability need to be reduced in order to have all but one out of 1000 units conform to the specifications?
+        \begin{align*}
+            %---------------------------------------------%
+            &\begin{aligned}
+                P(nonconformed) &= 1- P\left(4.95 \leq x \leq 5.05\right)\\
+                &= P\left(\frac{4.95 - 5}{\sigma} \leq Z \leq \frac{5.05- 5}{\sigma}\right)\\
+                &= \frac{1}{1000} = 0.001\\
+            \end{aligned}\\
+            %---------------------------------------------%
+            &P\left(Z \leq \frac{5.05 - 5}{\sigma}\right) = 0.9995 = P\left(Z \leq 3.27\right)\\
+            &\because \ \frac{0.005}{\sigma} = 3.27\\
+            &\therefore \ \sigma = 0.0153_{ \ \#}\\
+        \end{align*}
+        
+    \end{enumerate}
