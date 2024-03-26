@@ -1,7 +1,7 @@
 # 2024-Spring-Quality_Control
 
 ## Contents
-* 利用 [Overleaf](https://www.overleaf.com) 撰寫 LaTeX 格式之文件
+利用 [Overleaf](https://www.overleaf.com) 撰寫 LaTeX 格式之文件
 * **pdf**：完成 tex 檔編輯後，以 PDF 格式輸出的結果
   * [書面](https://github.com/pcchiu03/24Spring-Quality_Control/tree/main/pdf)
 * **tex**：各次作業的 tex 檔，可透過修改以下提供的模板進行編輯
