@@ -1,0 +1,9 @@
+計算累加機率差 $P(X \leq 5) - P(X \leq 4)$，並與 $P(X = 5)$ 比較
+
+\begin{lstlisting}[language=R]
+> ppois(5, 10.2) - ppois(4, 10.2)
+[1] 0.0341992
+> dpois(5, 10.2)
+[1] 0.0341992
+\end{lstlisting}
+不管是使用 $P(X \leq 5) - P(X \leq 4)$ 或  $P(X = 5)$，兩者皆會得出相同的數值。
