@@ -6,8 +6,8 @@ The inside diameters of bearings used in an aircraft landing gear assembly are k
             &H_0: \mu = 8.25 \\
             &H_1: \mu \neq 8.25 \\
             &Z_0 = \frac{\Bar{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}} = \frac{8.2535 - 8.25}{\frac{0.002}{\sqrt{15}}} = 6.7777 \\
-            &Z_\frac{\alpha}{2} = Z_{0.025} = 1.645 \\
-            &\because 1.645 < 6.7777\\
+            &Z_\frac{\alpha}{2} = Z_{0.025} = 1.96 \\
+            &\because 1.96 < 6.7777\\
             &\therefore \textbf{reject } \ H_0
         \end{align*}
 
@@ -22,9 +22,9 @@ The inside diameters of bearings used in an aircraft landing gear assembly are k
     \item Construct a 95\% two-sided confidence interval on the mean bearing diameter.
         \begin{align*}
             &\Bar{x} - Z_\frac{\alpha}{2} \times \frac{\sigma}{\sqrt{n}} \leq \mu \leq \Bar{x} + Z_\frac{\alpha}{2} \times \frac{\sigma}{\sqrt{n}}\\
-            &8.2535 - 1.645 \times \frac{0.002}{\sqrt{15}} \leq \mu \leq 8.2535 + 1.645 \times \frac{0.002}{\sqrt{15}} \\
-            &8.2527 \leq \mu \leq 8.2543\\
-            &\therefore \text{the 95\% C.I. is } \ [8.2527, \ 8.2543]
+            &8.25 - 1.96 \times \frac{0.002}{\sqrt{15}} \leq \mu \leq 8.25 + 1.96 \times \frac{0.002}{\sqrt{15}} \\
+            &8.249 \leq \mu \leq 8.251\\
+            &\therefore \text{the 95\% C.I. is } \ [8.249, \ 8.251]
         \end{align*}
     
 \end{enumerate}
