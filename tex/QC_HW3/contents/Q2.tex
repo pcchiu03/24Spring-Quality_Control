@@ -8,9 +8,9 @@ The service life of a battery used in a cardiac pacemaker is assumed to be norma
             &H_1: \mu > 25 \\
             & \\
             &t_0 = \frac{\Bar{x} - \mu_0}{\frac{s}{\sqrt{n}}} = \frac{26 - 25}{\frac{1.6248}{\sqrt{10}}} = 1.9463 \\
-            &t_{\frac{\alpha}{2}, \ n-1} = t_{0.025, \ 9} = 2.262 \\
-            &\because 2.262 > 1.9463\\
-            &\therefore \textbf{fail to reject } \ H_0 \\
+            &t_{\alpha, \ n-1} = t_{0.05, \ 9} = 1.833 \\
+            &\because 1.833 < 1.9463\\
+            &\therefore \textbf{reject } \ H_0 
         \end{align*}
         
     \item Construct a 90\% two-sided confidence interval on mean life in the accelerated test.
@@ -18,16 +18,16 @@ The service life of a battery used in a cardiac pacemaker is assumed to be norma
             &\Bar{x} - t_{\frac{\alpha}{2}, \ n-1} \times \frac{s}{\sqrt{n}} \leq \mu \leq \Bar{x} + t_{\frac{\alpha}{2}, \ n-1} \times \frac{s}{\sqrt{n}} \\
             &26 - 1.833 \times \frac{1.6248}{\sqrt{10}} \leq \mu \leq 26 + 1.833 \times \frac{1.6248}{\sqrt{10}} \\
             &25.0582 \leq \mu \leq 26.9418 \\
-            &\therefore \text{the 90\% C.I. is } \ [25.0582, \ 26.9418]\\
+            &\therefore \text{the 90\% C.I. is } \ [25.0582, \ 26.9418]
         \end{align*}
         
     \item Construct a 95\% lower confidence interval on mean battery life. Why would the manufacturer be interested in a one-sided confidence interval?
         \begin{align*}
-            &\Bar{x} - t_{\frac{\alpha}{2}, \ n-1} \times \frac{s}{\sqrt{n}} \leq \mu \\
-            &26 - 2.262 \times \frac{1.6248}{\sqrt{10}} \leq \mu \\
-            &24.8378 \leq \mu \\
-            &\therefore \text{the 95\% lower C.I. is } \ [24.8378, \ \infty]\\
-            &\text{that means only if } \  \mu < 24.8378 \ \text{, then they need to inspect their process.}
+            &\Bar{x} - t_{\alpha, \ n-1} \times \frac{s}{\sqrt{n}} \leq \mu \\
+            &26 - 1.833 \times \frac{1.6248}{\sqrt{10}} \leq \mu \\
+            &25.0582 \leq \mu \\
+            &\therefore \text{the 95\% lower C.I. is } \ [25.0582, \ \infty]\\
+            &\text{that means only if } \  \mu < 25.0582 \ \text{, then they need to inspect their process.}
         \end{align*}
         
 \end{enumerate}
