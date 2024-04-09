@@ -1,0 +1,70 @@
+The probability distribution of the discrete random variable $x$ is $p(x) = kr^x, \ 0 < r < 1$. Find the appropriate value of $k$ . Find the mean and variance of $x$.
+    \begin{enumerate}
+        \item The value of $k$.
+            \begin{align*}
+                &\text{let} \ S \ \text{be the sample space, then } \ P(S) = 1\\
+                &\text{and let } \ X \equiv r.v. \ \text{of this distribution}\\
+                &\because P(S) = P(x) 
+                = \sum_{x = 0}^{\infty} \ kr^x 
+                = k \ \sum_{0}^{\infty} \ r^x
+                = 1\\
+                &\text{by Geometric Progression, } \ \sum_{x = 0}^{\infty} \ r^x = \frac{1}{1 - r}\\
+                &\therefore \ 1 = k \ \sum_{0}^{\infty} \ r^x 
+                = k \ \frac{1}{1 - r}\\
+                &\text{so we can know that} \ k = 1 - r_{ \ \#}\\
+            \end{align*}
+
+        \item The mean of $x$.
+            \begin{align*}
+                &\text{by the definition of this question, we can rewrite that } \ p(x) = (1-r) \ r^x, x = 0, 1, 2, ...\\
+                &\text{and by the formula of mean, } \ E(x) = \sum_{x = 0}^{\infty} \ x \ p(x)\\
+                %---------------------------------------------%
+                &\begin{aligned}
+                    \therefore E(x) &= \sum_{x = 0}^{\infty} \ x \ (1-r) \ r^x\\
+                    &= (1-r) \ \sum_{x = 0}^{\infty} \ x \ r^x\\
+                    &= r(1-r) \ \sum_{x = 0}^{\infty} \ x \ r^{x-1}\\
+                \end{aligned}\\
+                %---------------------------------------------%
+                &\text{since } f(x) = \sum_{0}^{\infty} \ r^x = \frac{1}{1 - r}\\
+                &\text{by differentiate, we get } \ f'(x) = \sum_{0}^{\infty} \ x \ r^{x-1} = \frac{1}{(1 - r)^2}\\       
+                %---------------------------------------------%
+                &\begin{aligned}
+                    \text{so we can rewrite and know that } \  E(x) &= r(1-r) \frac{1}{(1-r)^2}\\
+                    &= \frac{r}{1-r}_{ \ \#}\\
+                \end{aligned}
+                %---------------------------------------------%
+            \end{align*}
+
+        \item The variance of $x$.
+            \begin{align*}
+                %---------------------------------------------%
+                &\begin{aligned}
+                    \text{by the formula of variance, } \ Var(x) &= E(X^2) - E(X)^2\\
+                    &= E[X(X-1)] + E(X) - E(X)^2\\
+                \end{aligned}\\
+                %---------------------------------------------%
+                %
+                %
+                %---------------------------------------------%
+                &\begin{aligned}
+                    \text{and since }\  E[X(X-1)] &= \sum_{x=0}^{\infty}\ x(x-1)\ p(x)\\
+                    &= \sum_{x=0}^{\infty}\ x(x-1)\ (1-r) \ r^x\\
+                    &= (1-r) \ \sum_{x=0}^{\infty}\ x(x-1)\ r^x\\
+                    &= r^2(1-r) \ \sum_{x=0}^{\infty}\ x(x-1)\ r^{x-2}\\
+                    &= r^2(1-r) \ \frac{2}{(1-r)^3}\\
+                    &= \frac{2r^2}{(1-r)^2}\\
+                \end{aligned}\\            
+                %---------------------------------------------%                
+                %
+                %
+                %---------------------------------------------%
+                &\begin{aligned}
+                    \text{thus } \  Var(x) &= E[X(X-1)] + E(X) - E(X)^2\\
+                    &= \frac{2r^2}{(1-r)^2} + \frac{r}{1-r} - \left(\frac{r}{1-r}\right)^2\\
+                    &= \frac{2r^2}{(1-r)^2} + \frac{r(1-r)}{(1-r)^2} - \frac{r^2}{(1-r)^2}\\
+                    &= \frac{r}{(1-r)^2}_{ \ \#}\\
+                \end{aligned}\\
+                %---------------------------------------------%
+            \end{align*}
+        
+    \end{enumerate}
