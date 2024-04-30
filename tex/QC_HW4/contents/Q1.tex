@@ -1,0 +1,43 @@
+The Samples of n = 6 items each are taken from a process at regular intervals. A quality characteristic is measured, $\Bar{x}$ and $R$ values are calculated for each sample. After 50 samples, we have $\sum_{i=1}^{50} \Bar{x_i} = 2000, \ \sum_{i=1}^{50} R_i = 200$. Assume that the quality characteristic is normally distributed.
+
+\begin{enumerate}
+    \item Compute control limits for the $\Bar{x}$ and $R$ control charts.
+        
+        $\Bar{x}$ charts:
+        \begin{align*}
+            UCL_{\Bar{x}} &= \Bar{\Bar{x}} + A_2 \ \Bar{R} = 40 + 0.483 \times 4 = 41.932_{\ \#}\\
+            CL_{\Bar{x}} &= \Bar{\Bar{x}} = 40_{\ \#}\\
+            LCL_{\Bar{x}} &= \Bar{\Bar{x}} - A_2 \ \Bar{R} = 40 - 0.483 \times 4 = 38.068_{\ \#}
+        \end{align*}
+        
+        $R$ charts:
+        \begin{align*}
+            UCL_{R} &= D_4 \ \Bar{R} = 2.004 \times 4 = 8.016_{\ \#}\\
+            CL_{R} &= \Bar{R} = 4_{\ \#}\\
+            LCL_{R} &= D_3 \ \Bar{R} = 0 \times 4 = 0_{\ \#}
+        \end{align*}
+
+    \item  All points on both control charts fall between the control limits computed in part (a). What are the natural tolerance limits of the process?
+        \begin{align*}
+            \because \ NTL &= \mu_{\Bar{x}} \pm 3 \ \sigma_x \\
+            &= \Bar{x} \pm 3 \times \frac{\Bar{R}}{d_2} \\
+            &= 40 \pm 3 \times \frac{4}{2.534}\\
+            \therefore \ NTL &= [35.264, \ 44.736]_{\ \#}
+        \end{align*}
+
+    \item If the specification limits are 41 ± 5.0 , what are your conclusions regarding the ability of the process to produce items within these specifications?
+        \begin{align*}
+            \because \ C_p &= \frac{USL - LSL}{6 \ \sigma_x}\\
+            &= \frac{46 - 36}{6 \times 1.5785}\\
+            &= 1.056\\
+            \therefore \ C_p &> 1 \ \text{, The process is capable}_{\ \#}
+        \end{align*}\pagebreak
+    
+    \item Assuming that if an item exceeds the upper specification limit it can be reworked, and if it is below the lower specification limit it must be scrapped, what percent scrap and rework is the process producing?
+        \begin{align*}
+            &\text{Let} \ X \equiv \text{rework, }\ Y \equiv \text{scrap}\\
+            &P(X > USL) = P(X > 46) = 1 - \Phi\left(\frac{46 - 40}{1.5785}\right) = 1 - \Phi(3.80) = 0.00007_{\ \#}\\
+            &P(X < LSL) = P(X < 36) = \Phi\left(\frac{36 - 40}{1.5785}\right) = \Phi(-2.53) = 0.0057_{\ \#}\\
+        \end{align*}
+
+\end{enumerate}

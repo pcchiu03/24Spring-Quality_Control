@@ -1,0 +1,51 @@
+The following $\Bar{x}$ and $s$ charts based on n = 4 have shown statistical control:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c}
+    \textit{$\Bar{x}$ chart} & \textit{$s$ chart} \\ \hline
+    UCL = 710        & UCL = 18.08      \\
+    CL = 700         & CL = 7.979       \\
+    LCL = 690        & LCL = 0         
+    \end{tabular}
+\end{table}
+
+\begin{enumerate}
+    \item Estimate the process parameters $\mu$ and $s$.
+        \begin{align*}
+            \mu &= \Bar{\Bar{x}} = 700_{\ \#}\\
+            s &= \frac{\Bar{s}}{c_4} = \frac{7.979}{0.9213} = 8.661_{\ \#}
+        \end{align*}
+    
+    \item If the specifications are at 705 ± 15, and the process output is normally distributed, estimate the fraction nonconforming.
+        \begin{align*}
+            \text{Let }\ X &\equiv \text{nonconforming}\\
+            P\left(X \right) &= 1 - P\left(690 \leq X \leq 720 \right)\\
+            &= 1 - P\left(\frac{690 - 700}{8.661} \leq Z \leq \frac{720 - 700}{8.661} \right)\\
+            &= 1 + \Phi(-1.15) - \Phi(2.31)\\
+            &= 0.1355_{\ \#}
+        \end{align*}
+            
+    \item For the $\Bar{x}$ chart, find the probability of a type I error, assuming $\sigma$ is constant.
+        \begin{align*}
+            \alpha &= 1 - P\left(690 \leq \Bar{x} \leq 710 \right)\\
+            &= 1 - P\left(\frac{690 - 700}{\frac{8.661}{\sqrt{4}}} \leq Z \leq \frac{710 - 700}{\frac{8.661}{\sqrt{4}}} \right)\\
+            &= 1 + \Phi(-2.31) - \Phi(2.31)\\
+            &= 0.0209_{\ \#}
+        \end{align*}\pagebreak
+
+    \item Suppose the process mean shifts to 693 and the standard deviation simultaneously shifts to 12. Find the probability of detecting this shift on the $\Bar{x}$ chart on the first subsequent sample.
+    \begin{align*}
+            1 - \beta &= 1 - P\left(690 \leq \Bar{x} \leq 710  \mid \mu_{x} = 693, \ \sigma_{x} = 12 \right)\\
+            &= 1 - P\left(\frac{690 - 693}{\frac{12}{\sqrt{4}}} \leq Z \leq \frac{710 - 693}{\frac{12}{\sqrt{4}}} \right)\\
+            &= 1 + \Phi(-0.5) - \Phi(2.83)\\
+            &= 0.3109_{\ \#}
+        \end{align*}
+    
+    \item For the shift of part (d), find the average run length.
+        \begin{align*}
+            &\because \ \text{The process is out of control}\\
+            &\therefore \ ARL_1 = \frac{1}{1-\beta} = \frac{1}{0.3109} = 3.2165_{\ \#}\\
+        \end{align*}
+    
+\end{enumerate}
