@@ -1,0 +1,42 @@
+A process is controlled with a fraction nonconforming control chart with three-sigma limits, n = 100, UCL = 0.161, center line = 0.080, and LCL = 0.
+
+\begin{enumerate}
+    \item Find the equivalent control chart for the number nonconforming.
+        \begin{align*}
+            CL &= n\Bar{p} = 100 \times 0.08 = 8\\
+            UCL &= n\Bar{p} + 3\sqrt{n\Bar{p}(1 - \Bar{p})} 
+            = 100 \times 0.08 + 3\sqrt{100 \times 0.08 \times 0.92}
+            = 16.139\\
+            LCL &= n\Bar{p} - 3\sqrt{n\Bar{p}(1 - \Bar{p})} 
+            = 100 \times 0.08 - 3\sqrt{100 \times 0.08 \times 0.92}
+            = -0.139\\
+            &\therefore \ \text{For the $np$ chart: } \ UCL = 16.139, \ CL = 8, \ LCL = 0_{\ \#}
+        \end{align*}
+
+    \item Use the Poisson approximation to the binomial to find the probability of a type I error.
+        \begin{align*}
+            X &\equiv \text{the number of nonconforming}\\
+            X &\sim Bin(n = 100, p = 0.08) \ \approx \ X \sim Poi(\lambda = 8)\\
+            \alpha &= P\left(type \ I \ error \right) = 1 - P\left(X \leq 16.14 \right)\\
+            &= 1 - \sum_{i = 0}^{16.14} \ \frac{e^{-8} \ 8^x}{x!}\\
+            &= 1 - 0.9963\\
+            &= 0.0037_{\ \#}
+        \end{align*}
+        
+    \item Use the Normal approximation to find the probability of a type II error if the process fraction nonconforming shifts to 0.2.
+        \begin{align*}
+            \beta &= P\left(type \ II \ error \right) = P\left(0 < \hat{p} < 0.161 \ | \ p = 0.2 \right)\\
+            &= \Phi \left(\frac{0.161 - 0.2}{\sqrt{\frac{0.2 \times 0.8}{100}}} \right) - \Phi \left(\frac{0 - 0.2}{\sqrt{\frac{0.2 \times 0.8}{100}}} \right)\\
+            &= \Phi(-0.98) - \Phi(-5.00)\\
+            &= 0.1635_{\ \#}
+        \end{align*}
+        
+    \item What is the probability of detecting the shift in part (c) by at least the fourth sample after the shift?
+        \begin{align*}
+            P\left(detect \ the \ shift \ at \ least \ 4th \ sample \right) &= 1 - P\left(no \ detect \ at \ first \ 3 \ sample \right)\\
+            &= 1 - \beta^3\\
+            &= 1 - (0.1635)^3\\
+            &= 0.9956_{\ \#}
+        \end{align*}
+        
+\end{enumerate}

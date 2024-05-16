@@ -1,0 +1,21 @@
+In designing a fraction nonconforming chart with center line at p = 0.20 and three-sigma control limits, what is the sample size required to yield a positive lower control limit? What is the value of n necessary to give a probability of 0.50 of detecting a shift in the process to 0.26?
+
+\begin{itemize}
+    \item The sample size that required to yield LCL:
+        \begin{align*}
+            &\because \ \text{We want to achieve } \ LCL = \Bar{p} - 3 \sqrt{\frac{\Bar{p} \ \Bar{q}}{n}} > 0\\
+            &\Rightarrow 0.2 - 3\sqrt{\frac{0.2 \times 0.8}{n}} > 0 \\
+            &\Rightarrow \left(\frac{0.2}{3} \right)^2 > \frac{0.16}{n}\\
+            &\Rightarrow n > 0.16 \times \frac{9}{0.04} = 36\\
+            &\therefore \ \textbf{The sample size that required is greater than 36}_{\ \#}
+        \end{align*}
+        
+    \item The value of n necessary to give a probability of 0.50 to detect a shift to 0.26: 
+        \begin{align*}
+            &\Rightarrow 0.26 - 0.2 = 3\sqrt{\frac{0.2 \times 0.8}{n}}\\
+            &\Rightarrow \left(\frac{0.06}{3} \right)^2 = \frac{0.16}{n}\\
+            &\Rightarrow n = 0.16 \times \frac{9}{0.0036} = 400\\
+            &\therefore \ \textbf{The value of $n$ that necessary is 400}_{\ \#}
+        \end{align*}
+    
+\end{itemize}

@@ -1,0 +1,34 @@
+A process is being controlled with a fraction nonconforming control chart. The process average has been shown to be 0.07. Three-sigma control limits are used, and the procedure calls for taking daily samples of 400 items.
+
+\begin{enumerate}
+    \item Calculate the upper and lower control limits.
+        \begin{align*}
+            CL &= \Bar{p} = 0.07\\
+            UCL &= \Bar{p} + 3\sqrt{\frac{\Bar{p}(1 - \Bar{p})}{n}} 
+            = 0.07 + 3\sqrt{\frac{0.07 \times 0.93}{400}}
+            = 0.108\\
+            LCL &= \Bar{p} - 3\sqrt{\frac{\Bar{p}(1 - \Bar{p})}{n}}
+            = 0.07 - 3\sqrt{\frac{0.07 \times 0.93}{400}}
+            = 0.032\\
+            &\therefore \ \text{For the $p$ chart: } \ UCL = 0.108, \ CL = 0.07, \ LCL = 0.032_{\ \#}   
+        \end{align*}
+        
+    \item If the process average should suddenly shift to 0.10, what is the probability that the shift would be detected on the first subsequent sample?
+        \begin{align*}
+            1 - \beta &= P\left(detect \ on \ 1st \ sample \right)\\
+            &= 1 - P(0.032 < \hat{p} < 0.108 \ | \ p = 0.1)\\
+            &= 1 - \Phi\left(\frac{0.108 - 0.1}{\sqrt{\frac{0.1 \times 0.9}{400}}} \right) + \Phi\left(\frac{0.032 - 0.1}{\sqrt{\frac{0.1 \times 0.9}{400}}} \right)\\
+            &= 1 - \Phi(0.53) + \Phi(-4.53)\\
+            &= 0.298_{\ \#}
+        \end{align*}
+        
+    \item What is the probability that the shift in part (b) would be detect on the first or second sample taken after the shift?
+        \begin{align*}
+            P\left(detect \ on \ 1st \ or \ 2nd \ sample \right) &= P\left(detect \ 1st \ sample \right) + P\left(detect \ 2nd \ sample \right)\\
+            &= (1 - \beta) + \beta(1 - \beta)\\
+            &= 0.298 + (1 - 0.298) \times 0.298\\
+            &= 0.507_{\ \#}\\
+        \end{align*}
+
+    \pagebreak
+\end{enumerate}
