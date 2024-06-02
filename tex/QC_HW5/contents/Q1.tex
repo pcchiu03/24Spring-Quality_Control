@@ -26,17 +26,17 @@ A process is controlled with a fraction nonconforming control chart with three-s
     \item Use the Normal approximation to find the probability of a type II error if the process fraction nonconforming shifts to 0.2.
         \begin{align*}
             \beta &= P\left(type \ II \ error \right) = P\left(0 < \hat{p} < 0.161 \ | \ p = 0.2 \right)\\
-            &= \Phi \left(\frac{0.161 - 0.2}{\sqrt{\frac{0.2 \times 0.8}{100}}} \right) - \Phi \left(\frac{0 - 0.2}{\sqrt{\frac{0.2 \times 0.8}{100}}} \right)\\
-            &= \Phi(-0.98) - \Phi(-5.00)\\
-            &= 0.1635_{\ \#}
+            &= \Phi \left(\frac{16.139 - 0.2}{\sqrt{\frac{0.08 \times 0.92}{100}}} \right) - \Phi \left(\frac{0 - 20}{\sqrt{\frac{0.08 \times 0.92}{100}}} \right)\\
+            &= \Phi(-1.44) - \Phi(-7.37)\\
+            &= 0.0749_{\ \#}
         \end{align*}
         
     \item What is the probability of detecting the shift in part (c) by at least the fourth sample after the shift?
         \begin{align*}
-            P\left(detect \ the \ shift \ at \ least \ 4th \ sample \right) &= 1 - P\left(no \ detect \ at \ first \ 3 \ sample \right)\\
-            &= 1 - \beta^3\\
-            &= 1 - (0.1635)^3\\
-            &= 0.9956_{\ \#}
+            P\left(detect \ the \ shift \ at \ least \ 4th \ sample \right) &= 1 - P\left(no \ detect \ at \ first \ 4 \ sample \right)\\
+            &= 1 - \beta^4\\
+            &= 1 - (0.0749)^4\\
+            &= 0.99996_{\ \#}
         \end{align*}
         
 \end{enumerate}
